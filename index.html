@@ -1,1 +1,209 @@
-working
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostr.net | Web Solutions</title>
+    <!-- Google Fonts & FontAwesome İkonları -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        /* Temel Sıfırlamalar ve Değişkenler */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigasyon Alanı */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Hero (Ana Görsel ve Başlık) Alanı */
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.05em;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        /* Özellikler (Grid) Alanı */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer (Alt Bilgi) */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+            margin-top: 6rem;
+        }
+
+        /* RESPONSIVE (Mobil Uyumluluk) AYARLARI */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .features {
+                grid-template-columns: 1fr; /* Mobilde kartları tek sütun yap */
+                gap: 1.5rem;
+            }
+            header {
+                padding: 1.5rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Menü -->
+    <header>
+        <a href="#" class="logo">hostr<span>.net</span></a>
+        <a href="#contact" class="cta-btn">İletişime Geç</a>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <h1>Fikirlerinizi Dijital Dünyada <span>Büyütün</span></h1>
+        <p>Web siteleriniz için hazırladığımız yıldırım hızında, modern ve tam uyumlu server & yazılım çözümleri.</p>
+        <a href="#services" class="cta-btn" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Keşfetmeye Başla</a>
+    </section>
+
+    <!-- Özellikler Bölümü -->
+    <section class="features" id="services">
+        <!-- Kart 1 -->
+        <div class="card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Yüksek Performans</h3>
+            <p>Gereksiz kod bloklarından arındırılmış, Google hız testlerinden tam puan alan altyapı.</p>
+        </div>
+        <!-- Kart 2 -->
+        <div class="card">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>%100 Mobil Uyumlu</h3>
+            <p>Telefon, tablet ve bilgisayar ekranlarında kayma yapmadan kusursuz görünüm.</p>
+        </div>
+        <!-- Kart 3 -->
+        <div class="card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Güvenli ve Kesintisiz</h3>
+            <p>Cloudflare ve GitHub Pages güvencesiyle DDOS saldırılarına karşı tam koruma.</p>
+        </div>
+    </section>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <p>&copy; 2026 hostr.net. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
